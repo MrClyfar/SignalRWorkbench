@@ -49,6 +49,7 @@
         $.connection.hub.start().done(function () {
             $("#btn-get-prices").click(function () {
                 pricesHub.server.getPrices();
+                console.log("Getting prices.");
                 return false;
             });
         })
