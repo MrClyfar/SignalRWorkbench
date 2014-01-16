@@ -54,6 +54,22 @@
             });
         })
     });
+
+    window.onbeforeunload = function (e) {
+
+        // TODO : Could we clear setTimeout() id's here?
+
+        e = e || window.event;
+
+        // For IE and Firefox prior to version 4
+        if (e) {
+            e.returnValue = 'Any string';
+        }
+
+        // For Safari
+        return 'Any string';
+    };  
+
 </script>
 
 
